@@ -9,8 +9,10 @@ for i in range(1, len(numlist)):
         indexlist.append(i)
         numlist.pop(i)
         numlist.insert(0, -1)
-print(indexlist)
-print(numlist)
+print(f'индексы элементов для удаления  {indexlist}')
+# print(numlist)
 while -1 in numlist:
     numlist.remove(-1)
-print(numlist)
+print(f'результат после удаления {numlist}')
+
+
