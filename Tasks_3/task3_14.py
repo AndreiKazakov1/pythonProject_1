@@ -14,3 +14,12 @@ try:
         print(f'индекс последнего нулевого элемента списка {max(index_list)}')
 except Exception:
     print('в списке нет нулевых элементов')
+
+# 2-nd var
+try:
+    print(numlist.index(0))
+    numlist.reverse()
+    print(len(numlist)-1-numlist.index(0))
+except Exception:
+    print('в списке нет нулевых элементов')
+
