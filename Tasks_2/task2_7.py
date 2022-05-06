@@ -3,6 +3,8 @@
 
 
 # нет решения если кот + кот = ток
+import sympy as sympy
+
 print('вариант кот + кот = ток')
 solution_1 = False
 for k in range(1, 10):
@@ -38,3 +40,9 @@ for k in range(1, 10):
                 solution_2 = False
 if solution_2:
     print('РЕШЕНИЯ НЕТ')
+
+
+
+
+
+
