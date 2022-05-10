@@ -10,7 +10,8 @@ from sympy import *
 n = int(input('введите размер списка (до n):'))
 numlist = [i for i in range(1, n)]
 numlist_prime = []
-print(numlist)
+numlist_super_prime = []
+print('начальный список ' + str(numlist))
 
 
 def isNumPrime(n):
@@ -25,12 +26,34 @@ def isNumPrime(n):
         return n
 
 
-for i in range(1, len(numlist)):
+for i in range(len(numlist)):
     if isNumPrime(numlist[i]) > 0:
         numlist_prime.append(numlist[i])
+print('простые ' + str(numlist_prime))
+numlist_prime.insert(0, -1)
+for i in range(len(numlist_prime)):
+    if isNumPrime(i) > 1:
+        numlist_super_prime.append(numlist_prime[i])
 
-print(numlist_prime)
+print('суперпростые' + str(numlist_super_prime))
 
-# для проверки на простоту
 
-isprime(101)
+
+# или так c использованием библиатечной функции isprime()
+numlist_prime = []
+numlist_super_prime = []
+for i in range(len(numlist)):
+    if isprime(numlist[i]):
+        numlist_prime.append(numlist[i])
+print('простые ' + str(numlist_prime))
+numlist_prime.insert(0, -1)
+for i in range(len(numlist_prime)):
+    if isprime(i):
+        numlist_super_prime.append(numlist_prime[i])
+
+
+print('суперпростые' + str(numlist_super_prime))
+
+
+# первые суперпростые
+#  3, 5, 11, 17, 31, 41, 59, 67, 83, 109, 127, 157
